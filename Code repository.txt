@@ -1,0 +1,24 @@
+Nothing fancy just a place to dump code I think I might need at a later date, helps to keep the program unclogged with lines upon lines of commented code!
+//some movement code
+
+						case SDLK_w: pModel = glm::translate(pModel, glm::vec3(0.0f, 0.10f, 0.0f));
+						std::cout << "W key has been pressed!" << std::endl;
+						break;
+					case SDLK_s:pModel = glm::translate(pModel, glm::vec3(0.0f, -0.05f, 0.0f));
+						break;
+
+SDL Get ticks + print to console
+This is useful becaus I'll be honest, I'll probablyt forget it works in miliseconds!
+
+		//prints the time to the console. This was mostly to learn how SDL_GetTicks(); works. Dividing the value by 1000 gives the time in seconds
+		// and makes it easier to work with. 
+		currentTime = SDL_GetTicks();
+		if (currentTime > lastTime + 1000)
+		{
+			lastTime = lastTime / 1000;
+			printf("Seconds Passed is: %d\n", lastTime);
+			lastTime = currentTime;
+		}
+
+
+Kiyoshi Hikawa
